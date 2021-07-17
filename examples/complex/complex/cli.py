@@ -42,7 +42,7 @@ class ComplexCLI(click.MultiCommand):
             mod = __import__(f"complex.commands.cmd_{name}", None, None, ["cli"])
         except ImportError:
             return
-        return mod.cli
+        return mod.cli3
 
 
 @click.command(cls=ComplexCLI, context_settings=CONTEXT_SETTINGS)

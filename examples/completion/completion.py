@@ -21,7 +21,7 @@ def get_env_vars(ctx, param, incomplete):
     return [k for k in os.environ if incomplete in k]
 
 
-@cli.command(help="A command to print environment variables")
+@cli.command(help="A command to print environment variables fine")
 @click.argument("envvar", shell_complete=get_env_vars)
 def show_env(envvar):
     click.echo(f"Environment variable: {envvar}")
